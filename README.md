@@ -10,3 +10,10 @@ Firstly clone the mater branch
 6. git add .
 7. git commit -m "adding my modules files"
 8. git push origin test
+
+
+some points to be remember 
+
+1. Naming convention (Keep the module you are working .html suppose if i work on gifiting keep gifitin.html, gifiting.css, gifiting.js
+2. for every file create seperate html and css file  and js file
+
