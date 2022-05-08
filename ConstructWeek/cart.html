@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boatStoneCart</title>
+</head>
+<body>
+    <div id="products"></div>
+    
+</body>
+</html>
+<script>
+
+var cartLSdata=JSON.parse(localStorage.getItem("collection-cart"))|| [];
+function display(data){
+    products.innerHTML=null;
+
+    data.forEach(function(elem,index) {
+        
+   
+    var box=document.createElement("div");
+
+    var Data_name=document.createElement("h1");
+    Data_name.innerText=elem.name;
+
+    var Data_Type=document.createElement("h2");
+    Data_Type.innerText=elem.type;
+
+    var Data_stars=document.createElement("h3");
+    Data_stars.innerText=elem.stars;
+
+    var Data_price=document.createElement("h3");
+    Data_price.innerText=elem.price;
+
+    var Data_reward=document.createElement("h4");
+    Data_reward.innerText=elem.reward;
+
+    var Data_reward1=document.createElement("h4");
+    Data_reward1.innerText=elem.reward2;
+
+    var button=document.createElement("button");
+    button.innerText="Delete";
+
+    button.addEventListener("click",function(event){
+        Delete(elem,index);
+    })
+
+    var warimg=document.createElement("img");
+    warimg.src=elem.img;
+
+
+
+    box.append(Data_name,Data_Type,Data_stars,Data_price,Data_reward,Data_reward1,button,warimg);
+    
+    products.append(box);
+    
+});
+}
+display(cartLSdata);
+
+function Delete(index){
+   event.target.parentNode.remove();
+       // localStorage.setItem("collection-cart",JSON.stringify(cartLSdata));
+}
+</script>

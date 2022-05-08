@@ -1,0 +1,32 @@
+*{
+    background-color: black;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100%;
+    background-color: black;
+    justify-content: center;
+    
+ }
+ #container>div+div{
+     color: white;
+     text-align: start;
+ }
+ 
+ h2{
+     color: grey;
+ }
+ h3{
+     color: red;
+     font: bold;
+ }
+ img{
+    justify-content: flex-start;
+ }
+button{
+     justify-content: end;
+     color: white;
+    
+ }
+ 

@@ -1,0 +1,34 @@
+*{
+    background-color: black;
+    display: flex;
+}
+#Outer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: black;
+    justify-content: center;
+    
+    
+ }
+ #Outer>div+div{
+     color: white;
+     text-align: start;
+ }
+ 
+ h2{
+     color: grey;
+ }
+ h3{
+     color: red;
+     font: bold;
+ }
+ img{
+    justify-content: flex-start;
+ }
+button{
+     justify-content: end;
+     color: white;
+    
+ }
+ 

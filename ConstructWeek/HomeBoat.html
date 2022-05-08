@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Module</title>
+</head>
+<body>
+    <div id="container">
+     
+
+    </div>
+</body>
+</html>
+<script>
+    var Collection=[{
+       img:"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/STONE-1450WEB_48633fa7-b4fb-46d3-b1b2-f90a8bff6df4_2000x.jpg?v=1651669287",
+       title1:"Top Sellers",
+       img1:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_600x.png?v=1650387008",
+       review1: "4.68 (34 reviews)",
+       name1:"boAt Watch Xtend‌",
+       price1:"Sale price₹ 2,499",
+       p1:"Colour variants for every style",
+       p2:"Fast Charge in just 15 minutes",
+       p3:"Ace your workouts with IPX5 rating"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a6549acb-b075-4c3e-8ed3-9c9fcba32d42_600x.png?v=1625046216",
+        review1: "4.68 (34 reviews)",
+       name1:"boAt Watch Xtend‌",
+       price1:"Sale price₹ 2,499",
+       p1:"Colour variants for every style",
+       p2:"Fast Charge in just 15 minutes",
+       p3:"Ace your workouts with IPX5 rating"
+
+    }
+]
+
+    Collection.map(function(elem){
+        console.log(elem)
+        var box=document.createElement("div");
+
+        var image=document.createElement("img");
+        image.id="mainimage"
+
+        var titleone=document.createElement("h1");
+        var box1=document.createElement("div");
+        box1.style.color="1px solid red";
+
+        var image1=document.createElement("img");
+        var review=document.createElement("h1");
+        var price=document.createElement("h2");
+        var para1=document.createElement("h4");
+        var para2=document.createElement("h4");
+        var para3=document.createElement("h4");
+
+        
+        image.src=elem.img;
+        titleone.innerText=elem.title1;
+
+        image1.src=elem.img1;
+        review.innerText=elem.review1;
+        price.innerText=elem.price1;
+        para1.innerText=elem.p1;
+        para2.innerText=elem.p2;
+        para3.innerText=elem.p3;
+
+        box.append(image,titleone);
+        document.querySelector("#container").append(box);
+        
+        box1.append(image1,review,price,para1,para2,para3);
+
+        document.querySelector("#container").append(box1);
+
+
+
+        
+
+
+
+      
+
+        
+
+        
+
+        
+        
+
+       
+        
+
+        
+        
+
+
+       
+       
+
+
+        
+        
+
+      
+        
+
+       
+
+
+
+
+
+
+
+
+      
+    })
+   
+
+</script>
