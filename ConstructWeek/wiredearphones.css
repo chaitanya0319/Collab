@@ -1,0 +1,339 @@
+#initial{
+    color: white;
+    border: 4px solid red;
+    background-color: red;
+    font-weight: 100;
+    text-align: center;
+    padding: 13px;
+    margin-top: -7px;
+}
+
+
+.stone > img{
+
+  width: 100%;
+  margin-top: 20px;
+}
+
+#card_div{
+   display: grid;
+   grid-template-columns: repeat(4,auto);
+   grid-template-rows:  repeat(16 , auto);
+   /* border: 10px solid black; */
+   
+   /* background-color: rgb(41, 36, 36); */
+   gap: 40px 20px;
+   /* margin-top: 5px; */
+    margin-left: 20px; 
+   /* padding: 50px; */
+   width: 95%;
+   
+   
+   /* justify-items: auto; */
+}
+
+#black{
+  width: 100%;
+  
+}
+/* #card_div>div{
+border: 2px solid rgb(208, 241, 16);  
+background-color: rgb(23, 21, 21);  
+ height: auto;
+width: auto; 
+ padding-left: 20px;
+}   */
+
+#img_div{   
+    
+    /* thid is blue card div */
+     display: grid;
+    /* justify-content: left;  */
+    border-radius: 10px;
+    background-color: rgb(223, 221, 221);
+    /* border: 2px solid rgb(66, 13, 211); */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 100%;
+    
+    /* padding: 10px; */
+    
+} 
+
+#box_div{
+    /* background-color: rgb(184, 178, 178); */
+
+    /* thid is orange small div */
+    display: block;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 95%;
+    margin: auto ;
+    border-radius: 10px;
+    padding: 5px;
+   
+    border-radius: 10px;
+    /* border: 2px solid orange; */
+    background-color: white;
+   
+   
+}
+#one{
+    margin-left: 20px;
+}
+
+#main_img{
+    margin-top: -60px;
+    height: 250px ;
+    width: 250px;
+    margin-left: 55px;
+}
+
+#main_img:hover{
+  cursor: pointer;
+}
+
+#add{
+    margin-left: 80%;
+    padding: 4px 12px;  
+    margin-top: 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: red;
+}
+
+#dis{
+      
+     background-color: white;
+     color: red;
+    margin-right: 70%;
+    padding: 5px;
+}
+
+#offer{
+    margin-top: -25px;
+    text-decoration: dotted;
+}
+
+#name{
+    margin-top: -15px;
+    font-weight: bold;
+}
+
+    /* side nav css */
+    body {
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+     /* @media screen and (min-width:741px) {
+      #card_div{
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        grid-template-rows:  repeat(17 , auto);
+      }
+       
+     } */
+
+     /* @media screen and (min-width: 380px) {
+      #card_div{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(auto , auto);
+      }
+     } */
+
+      .fi{
+          background-color: red;
+          color: white;
+          padding: 14px;
+          margin-top: -59px;
+      }
+
+      #selection{
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     gap: 40px;
+      }
+
+      #Av{
+          color: white;
+          background-color: black;
+          border: 1px solid black;
+      }
+
+      #Pr{
+        color: white;
+        background-color: black;
+        border: 1px solid black;
+    }
+
+#navdiv{
+    /* border: 2px solid pink; */
+   background-color: black;
+   border: 2px solid black;
+   margin-top: -17px;
+   height: 60px;
+}
+
+    #Boat{
+      height: 40px; 
+      margin-left: 62px;
+      margin-top: 10px;
+    }
+
+
+    #navdiv2{
+        display: flex;
+         margin-left: 50%;
+         margin-top: -40px;
+        width: 100px;
+        justify-content: space-between;
+        
+    }
+    #navdiv2>p{
+         
+     color: white;
+     /* border: 1px solid yellow; */
+      
+      
+    }
+
+    #navdiv3{
+        /* border: 1px solid yellow; */
+        display: flex;
+        margin-top: -48px;
+         margin-left: 70%;
+        width: 400px;
+        justify-content: end;
+    }
+
+    #men{
+      width: 30px;
+      height: 30px;
+      color:white;
+      /* border: 2px solid white; */
+    }
+
+    #gift{
+        width: 30px;
+        height: 30px;
+    }
+
+    /* #show{
+         margin-left: 40px;
+         font-size: 500px;
+    } */
+   
+  
+    #card_div{
+      height: 90%;
+    }
+ 
+    h1{
+      font-size: 40px;
+     padding-top: 20px;
+      margin-left: 60px;
+      font-weight: bold;
+      color: rgb(248, 241, 241);
+    }
+
+    #feature_div{
+      display: flex;
+       justify-content: end;
+       margin-bottom: 20px;
+      margin-right: 56px;
+      font-weight: bold;
+
+    }
+
+ #first{
+   display: flex;
+   margin-left: 24px;
+   gap: 20px;
+   /* background-color: black; */
+   color: white;
+   /* width: 70%; */
+ }
+ #card_div{
+   background-color: rgb(42, 41, 41);
+   margin-right: 20px;
+   margin-left: 40px; 
+ }
+
+ #gifting_tag_div{
+   width: 100%;
+   height: 90px;
+   /* background-color: black; */
+ }
+ #black{
+   background-color: rgb(42, 41, 41);
+   margin-top: -33px;
+  }
+
+  #cartBox{
+    height: 100%;
+    width: 40%;
+    border: 2px solid red;
+  }
+#sort{
+ padding: 5px;
+ border-radius: 5px;
+ background-color: black;
+ color: white;
+ 
+  
+}
+#sort>option{
+ font-size: larger;
+ line-height: 20px;
+ width: 100%;
+}
+
+
+.descript{
+  /* border : 1px solid yellow ; */
+  line-height: normal ;font-size: 15px;max-width: 931px;margin: 50px auto;color: #8f8f8f ;
+   background-color: grey black;
+   width: 85%;
+  
+
+}
+.descript > h2{
+ text-align: left;
+ color:white;
+}
