@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Zone</title>
+    <link rel="stylesheet" href="offerzone.css">
+    <style>
+        /* navbar */
+*{
+    margin:0px;
+    padding: 0px;
+
+}
+ #image{
+    height: 480px;
+    width: 1358px;
+} 
+
+ #cont {
+    position: absolute;
+    display: flex;
+    bottom: 570px;
+   
+    cursor: pointer;
+  }
+  a{
+      text-decoration: none;
+      color:white;
+  }
+body{
+    background-color:whitesmoke;
+}
+        .bag{
+       
+       
+       display: flex;
+       margin:auto;
+       margin-bottom: 40px;
+       justify-content: space-around;
+       align-content: space-around;
+     /* margin-top: 40px; */
+      
+   }
+   
+   .card {
+       width: 300px;
+       height: 280px;
+       background-color:white;
+       border: 1px solid rgb(224, 224, 224);
+       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+       margin-top: 40px;
+      
+       margin:auto;
+       margin-left: 100px;
+       padding:10px;
+       border-radius: 40px;
+      
+       
+   }
+   img{
+       width: 100%;
+      
+       margin-top: 30px;
+   }
+   
+   .card-text{
+     margin-bottom: 30px;
+     font-size: 24px;
+     color: rgb(22, 20, 20);
+   }
+   .card-text+p{
+       color: rgba(115, 110, 110, 0.704);
+       font-size: 20px;
+       margin-top:30px;
+   }
+  
+   #btn{
+       display: block;
+      margin: auto;
+       font-size: 17px;
+       border-radius: 5px;
+   background-color: white;
+   cursor: pointer;
+   height: 30px;
+   width:200px;
+   margin-top: 10px;
+   margin-right: 15px;
+   border: 1px solid rgb(35, 33, 33);
+   }
+   
+   #btn:hover{
+       background-color: red;
+   }
+
+
+    </style>
+</head>
+<body>
+    <!-- <div class="address">
+        
+       <a href="../cart/cart.html">Cart</a> 
+    </div> -->
+
+    <div id="cont">
+       <a href=""> Home/offer</a>
+    </div>
+    <div id="image">
+    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/offer-page_strip_Web.jpg?v=1634206843"/>
+    </div>
+     
+          <div class="bag" >
+        <div class="card">
+         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Pay-with-rewards_94f6eefb-811e-40b3-bf92-c0ac572cb2e8.png?v=1650793016"
+                   alt=""/>
+           
+           <p class="card-text">
+               20% cashback upto Rs.500
+           </p>
+           <p>Validity</p>
+           <h7>31st May 2022</h7>
+           
+            <button id="btn" onclick="showFullTerm()">Term & Condition</button> 
+          
+        
+       </div>
+       <div class="card">
+           
+           <div class="box-img">
+               <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mobikwik_3e9cbbd3-abb1-42cc-b4b4-68112a094cd2.png?v=1650793032"
+                   alt="" />
+           </div>
+           <p class="card-text">
+            Get flat Rs 50/- cashback
+           </p>
+           <p>Validity</p>
+          <h7>31st May 2022</h7>
+          
+            <button id="btn" onclick="showcondition()">Term & Condition </button> 
+           
+       </div>
+       
+       <div class="card">
+          
+           <div class="box-img">
+               <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Ola_money.jpg?v=1649227976"
+                   alt=""/>
+           </div>
+         
+          <p class="card-text">
+            Flat 10% cashback up to ₹750
+       </p>
+       <p>Validity</p>
+       <h7>30th June 2022</h7>
+       
+       
+       
+        <button id="btn" onclick="showFullcondition()">Term & Condition</button> 
+       
+       
+       </div>
+    </div> 
+ 
+      
+        <div id="black">
+
+
+  
+            <h1>Offer Zone</h1>
+          
+          
+          <div id="first" >
+            <span style="font-size:22px;cursor:pointer" onclick="openNav()">&#9776; Show filters</span>
+            <p>20 products</p>
+          </div>
+          <div id="feature_div" >
+              <select name="Sort by features" id="sort">
+              <option value="">features</option>
+              <option value="">Best Selling</option>
+              <option value="">Alphabitical, A-Z</option>
+              <option value="">Alphabitical, A-Z</option>
+              <option value="">Price,low to higth</option>
+              <option value="">Price,high to low</option>
+              <option value="">Data,old to new</option>
+              <option value="">Data,old to new</option>
+            </select>
+          </div>
+         
+            <div id="card_div" >
+        
+          
+         </div>
+           
+    </div>
+              
+</body>
+<script>
+    
+   function showFullTerm(){
+       alert("No Minimum transaction value"+"\n"+"20% upto 500 Rs cashback & Extra savings with Rewards is applicable on using Pay with Rewards on boAt."+"\n"+"No promo code required"+"\n"+"Customers who are not enrolled on any of the associated loyalty programs on Pay with Rewards will not be eligible for the offer."+"\n"+"Offer is valid from 1st April 2022 00:01 AM to 31st May 2022 11:59 PM"+"\n"+"Cashback will be auto credited in Pay with Rewards within 24 hours of the transaction"+"\n"+"Offer applicable only on orders through boAt App, Website & Msite."+"\n"+"Twid and boAt reserves the right to withdraw, modify or replace this offer with another offer at any time without prior notice and the same is at the sole discretion of the company."+"\n"+"This offer cannot be combined with any other payment offer."+"\n"+"This offer cannot be combined with any other payment offer."+"\n"+"This Offer is conducted by Twidpay."+"\n"+"By availing this offer, it is deemed that the customer has agreed to all the terms & conditions mentioned herein.");
+   }
+
+   function showcondition(){
+       alert("Offer only valid on Mobikwik wallet transactions via RazorPay payment gateway"+"\n"+"Minimum transaction amount via MobiKwik to avail the offer is Rs 799/- and above."+"/n"+"Offer valid period: 1st - 31st May 2022"+"\n"+"Offer can be availed once per user during the campaign period."+"\n"+"Cashback will be credited within 24 hours of the transaction."+"\n"+"Other general offer T&Cs as applicable.");
+   }
+
+   function showFullcondition(){
+       alert("Offer is applicable on the first ever transaction on boAt using OlaMoney Postpaid+"+"\n"+"Offer is valid from: 1st Apr'22 to 30th Jun'22"+"\n"+"Offer is valid for OlaMoney Postpaid+ active users only."+"\n"+"Min txn value: 499"+"\n"+"Offer is not applicable for postpaid plus users who have not cleared dues beyond their due dates."+"\n"+"Offer is exclusive to you and intended for your use only."+"\n"+"Cashback will be credited within 10 working days to your active OlaMoney Postpaid+ or Wallet account."+"\n"+"Cashback will not be applicable on EMI transaction on OlaMoney Postpaid+")
+   }
+
+
+
+    </script>
+    
+</html>
+<script src="offerzone.js">
+
+</script>
