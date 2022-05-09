@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="boatStone.css">
-    
-</head>
 
-<body>
-    <div id="container">
-     
-
-    </div>
-
-</body>
-</html>
-
-
-<script>
 var CollectionImg=[
     {
         img:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main3_600x.png?v=1632893559"
@@ -100,7 +79,3 @@ collectionData.map(function (elem){
 })
 
  
-</script>
-
-<script async src="boatStone.js"></script> 
-<script defer src="boatStone.js"></script> 
