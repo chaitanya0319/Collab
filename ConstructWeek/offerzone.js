@@ -188,8 +188,14 @@ var offer = [
     },
   
 ]
- var card=JSON.parse(localStorage.getItem("card")) || [];
-    
+ var cart=JSON.parse(localStorage.getItem("cart")) || [];
+ var sort  = document.querySelector("#sort")  //sorting tag selection
+//   displayData(offer)
+
+//      function displayData(data){
+//          document.querySelector("#card_div").innerHTML = null
+
+
     offer.map(function(elem){
         var div1 = document.createElement("div");
         div1.id = "img_div"
@@ -211,7 +217,7 @@ var offer = [
         cart_btn.innerText="ADD+"
         cart_btn.style.border = "1px solid white"
         cart_btn.addEventListener("click" ,function(){
-            addToFav(elem)
+            addToCart(elem)
         })
        
         var para = document.createElement("p");
@@ -220,13 +226,15 @@ var offer = [
         var pro_name = document.createElement("p")
         pro_name.id = "name"
         
-        var price = document.createElement("p");
-        price.style.color = "red"
+        var pro_price = document.createElement("p");
+        pro_price.id = "rupees"
        
        
-        var colour = document.createElement("p");
-         
+        var pro_color = document.createElement("p");
+        pro_color.id="colour"
    //value assigning part
+
+
    discount_tag.innerText = elem.discount; 
 
     pro_img.src =  elem.product_img;
@@ -235,15 +243,15 @@ var offer = [
 
     pro_name.innerText = elem.product_name;
 
-    price.innerText =elem.price;
+    pro_price.innerText =elem.price;
 
-    colour.innerText = elem.colours;
+    pro_color.innerText = elem.colours;
 
     // button.addEventListener("click",function(){
     //     addToFav(elem)
     // })
     
-    div2.append(cart_btn,para, pro_name, price,colour)
+    div2.append(cart_btn,para, pro_name, pro_price,pro_color)
     div1.append( discount_tag,pro_img, div2 )
     
     
@@ -255,85 +263,102 @@ var offer = [
 
 
  
-    function addToFav(elem){
+    function addToCart(elem){
         //  console.log(elem)
-          card.push(elem)
-         localStorage.setItem("card",JSON.stringify(card))
+          cart.push(elem)
+         localStorage.setItem("cart",JSON.stringify(cart))
         
     }
 
+    function openNav(){
+        document.getElementById("mySidenav").style.width="250px";
 
- function sortTheData(){
-     var value=sort.value;
+    }
 
-     if(value =="Low to high"){
-       offer.sort(function(a,b){
-           return Number.parseInt(a.price) - Number.parseInt(b.price)
+    function closeNav(){
+        document.getElementById("mySidenav").style.width="0";
+    }
 
-       })
-       displayData(offer)
-     }
-     else if(value == "High to low"){
-         offer.sort(function(a,b){
-             return Number.parseInt(b.price) -  Number.parseInt(a.price)
-         })
-         displayData(offer)
-     }
-     else if(value == "A-Z"){
-         offer.sort(function(p,q){
 
-            if(p.product_name<q.product_name){
-                retun -1
-            }else{
-                return 1
-            }
-            return 0;
-         })
-         displayData(offer)
-     }
-     else if(value == "Z-A"){
-         offer.sort(function(p,q){
+    // thiis is sorting part
 
-            if(p.product_name<q.product_name){
-                return 1;
-            }else{
-                return -1;
-            }
-            return 0;
-         })
-         displayData(offer)
-     }
-     else if(value == "best Selling"){
-        //  console.log(offer);
-        offer.sort(function(p,q){
-            return Number.parseInt(q-a) - Number.parseInt(p-a)
-        })
-        displayData(offer)
-     }
-
-     // dummy creation
-
-     else if(value == "date new to old"){
-         //console.log(offer)
-
-         offer.sort(function(p,q){
-             return Number.parseInt(q-a) - Number.parseInt(p-a)
-         })
-         displayData(offer)
-     }
-     else if(value == "date old to new"){
-         //console.log(offer)
-         offer.sort(function(p,q){
-             return Number.parseInt(p-a) - Number.parseInt(q-a)
-         })
-         displayData(offer)
-     }
+ 
+    function sortTheData(){
+        var value = sort.value;
+       
+            if (value == "Low to high" ){
      
-}
-
-Sort.addEventListener("change",sortTheData)
-
-function newImgFun(pro_img){
-    pro_img.src = "https://www.boat-lifestyle.com/products/airdopes-131"
-}
-displayData(offer)
+                 offer.sort(function (p,q){
+           return Number.parseInt(p.price) - Number.parseInt(q.price)
+          
+      })
+       displayData(offer)
+    
+   }
+    else if (value == "High to low"){
+            offer.sort(function (p,q){
+               return Number.parseInt(q.price) - Number.parseInt(p.price)
+          })
+          displayData(offer)
+       }
+       
+   else if (value == "A-Z"){
+           offer.sort(function (a,b){
+            
+                   if (a.product_name<b.product_name){
+                       return -1;
+                   }else{
+                       return 1;
+                   }
+                   return 0;
+              
+                })
+                displayData(offer)
+            }
+            else if (value == "Z-A"){
+                offer.sort(function (a,b){
+                 
+                    if (a.product_name<b.product_name){
+                        return 1;
+                    }else{
+                        return -1;
+                    }
+                    return 0;
+                  
+            })
+            displayData(offer)
+            }
+            else if (value == "best Selling" ){
+                // console.log(offer)
+                offer.sort(function(a , b){
+                    return Number.parseInt(b.p) - Number.parseInt(a.p) 
+                })
+               displayData(offer)
+            }
+        
+            // dummy cretion because I dont have information about date of product
+        
+            else if (value == "date new to old" ){
+                // console.log(offer)
+                offer.sort(function(a , b){
+                    return Number.parseInt(b.p) - Number.parseInt(a.p) 
+                })
+               displayData(offer)
+            }
+            else if (value == "date old to new" ){
+                // console.log(offer)
+                offer.sort(function(a , b){
+                    return Number.parseInt(a.p) - Number.parseInt(b.p) 
+                })
+               displayData(offer)
+            }
+        }
+          
+            sort.addEventListener("change",sortTheData)
+        
+         
+         function newImgFun(pro_img){
+           
+              pro_img.src =  "https://www.boat-lifestyle.com/products/airdopes-131" 
+         }    
+         displayData(offer)

@@ -4,34 +4,29 @@
 
 
 /* offerZonne */
-
-#card_div{
-    height: 90%;
-  }
+#colour{
+  font-size: 18px;
+  margin-top: 10px;
+}
+#rupees{
+  font-size: 18px;
+  color: red;
+}
 
   h1{
-    font-size: 37px;
-   padding-top: 10px;
-    margin-left: 24px;
+    font-size: 39px;
+   padding-top: 20px;
+    margin-left: 60px;
     font-weight: bold;
     color: rgb(248, 241, 241);
   }
-  h2>#sort{
-    height: 10px;
-    width:15px;
-    border: 1px solid black;
-   background-color: black;
-   color: white;
-   font-size: 17px;
   
-  }
-
   #feature_div{
     display: flex;
      justify-content: end;
      margin-bottom: 20px;
-    margin-right: 10px;
-    background-color: rgb(42, 41, 41);
+    margin-right: 56px;
+    font-weight: bold;
   }
 
 #first{
@@ -40,27 +35,36 @@
  gap: 20px;
  
  color: white;
- width: 70%;
+ /* width: 70%; */
 }
 
-#card_div{
-    background-color: rgb(42, 41, 41);
-    margin-right: 20px; 
+  #black{
+     width:100%;
+     background-color: rgb(42,42,41);
+  } 
+  #carBox{
+    height: 100%;
+    width: 40%;
+    border:2px solid red;
   }
 
-  #gifting_tag_div{
-    width: 100%;
-    height: 90px;
-     background-color: black;
+  #sort{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
   }
-  #black{
-    background-color: rgb(42, 41, 41);
-     
-  } 
+
+  #sort>option{
+    font-size: larger;
+    line-height: 20px;
+    width: 100%;
+  }
 
  /* js part css */
  #initial{
     color: white;
+    border:4px solid red;
     background-color: red;
     font-weight: 100;
     text-align: center;
@@ -69,18 +73,18 @@
 }
 
 #card_div{
+  /* height: 90%; */
    display: grid;
    grid-template-columns: repeat(4,auto);
-   grid-template-rows:  repeat(17 , auto);
-   border: 1px solid black;
-   /* background-color: rgb(41, 36, 36); */
-   gap: 20px 20px;
-   /* margin-top: 5px; */
-   /* margin-left: 10px; */
-   padding: 40px;
-   
-   
+   grid-template-rows:  repeat(6 , auto);
+  gap: 40px 20px;
+   margin-left: 40px;
+   margin-right: 20px;
+   width:95%;
+   background-color: rgb(42, 41, 41);
+   margin-right: 20px; 
    /* justify-items: auto; */
+   padding: 40px;
 }
 
 
@@ -103,7 +107,9 @@
     /* background-color: rgb(184, 178, 178); */
 
       /* thid is orange small div */
-    height: 135px;
+      display: block;
+      flex-wrap: wrap;
+    height: 134px;
     width: 92%;
     
    padding:10px;
@@ -111,8 +117,9 @@
     /* border: 2px solid orange; */
     background-color: white;
    
-   margin-top: 10px;
+   /* margin-left: 10px; */
 
+margin-top: 10px;
     
 }
 #one{
@@ -126,39 +133,47 @@
     margin-left: 55px;
 }
 
+#main_img:hover{
+  cursor: pointer;
+}
+
 #add{
     margin-left: 76%;
-    /* padding: 10px; */
+    /* padding: 4px 12 px; */
     margin-top: 10px;
-    font-size: 19px;
     color: white;
     padding:10px 10px 10px 10px;
     border-radius: 10px;
     background-color: red;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
+  font-size: 19px;
+  cursor: pointer;
+  
 }
 #add:hover{
   color: black;
 }
 
 #dis{
-     border: 1px solid white;
      background-color:white;
+     margin-top: 5px;
+     margin-left: 2px;
      color:red;
       margin-right: 69%;
-      margin-top: 5px;
-      margin-left: 2px;
-      font-weight: bold;
+     padding:5px;
+     font-size: 15px;
 }
 
 #offer{
     margin-top: -15px;
     text-decoration: dotted;
-    font-size: 10px;
-    color: rgb(22, 22, 22);
+    font-size: 15px;
+    color:rgb(22,22,22)
+   
     
+}
+#rupees{
+  font-size: 15px;
 }
 h1{
   font-size: 30px;
@@ -170,12 +185,61 @@ h1{
     font-size: 17px;
 }
 
-
-/* blackpart */
-/* #offer>price{
-  margin-top: 20px;
+body{
+  font-family: "Lato", san-serif;
 }
 
-colour{
-  margin-top: 20px;
-} */
+.sidenav{
+  height: 100%;
+  width:0px;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  background-color: #111;
+  overflow-x:hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a{
+  padding:8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:#818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover{
+  color:#f1f1f1;
+}
+
+.sidenav.closebtn{
+  position: absolute;
+  top:0;
+  right:25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.fi{
+  background-color: red;
+  color: white;
+  padding: 14px;
+  margin-top: -9px;
+
+}
+
+#selection{
+  display:grid;
+  grid-template-columns:repeat( 1,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap:40px;
+}
+
+#Av{
+  color:white;
+  background-color: black;
+  border: 1px solid black;
+
+}

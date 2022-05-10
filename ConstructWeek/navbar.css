@@ -20,7 +20,7 @@ body {
 
 #nav {
     background-color: black;
-    height: 77px;
+    height: 85px;
    max-width:100%;
     display: flex;
     justify-content: space-between;
